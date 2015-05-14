@@ -64,7 +64,7 @@ require(['config'], function () {
             ParsleyUtils._resetWarnings();
           });
           utils(ParsleyUtils);
-          parsleyBase(Parsley);
+          parsleyBase(Parsley.Factory);
           pubsub();
           abstract();
           field(ParsleyField);
@@ -96,9 +96,9 @@ require(['config'], function () {
             //   window.ParsleyConfig = $.extend(true, {}, window.ParsleyConfig, { excluded: 'input[type=button], input[type=submit], input[type=reset], input[type=hidden], input[disabled]' });
             // });
             remote(ParsleyExtend);
-            abstract(Parsley);
-            field(ParsleyField, Parsley);
-            form(ParsleyForm, Parsley);
+            abstract();
+            field(ParsleyField);
+            form(ParsleyForm);
           });
 
           require([
